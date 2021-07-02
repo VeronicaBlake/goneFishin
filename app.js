@@ -1,5 +1,3 @@
-
-//maybe add a sweetalert to tell you what your upgrade is?
 var totalFish = 0;
 let clickUpgrades = {
     beverage: {
