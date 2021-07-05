@@ -20,22 +20,26 @@
         <div class="col-md-12 text-white">
                 <h1 id="total-fish">Total Fish: </h1>
         </div>
-        <div id="clicker" class="col-md-12 " >
-            <i class="fas fa-fish fa-10x glow" onclick="click()"></i>
+        <div id="clicker" class="col-md-12" >
+            <i class="fas fa-fish fa-10x glow" onclick="addFish()"></i>
         </div>
     </div>
     <div class="row>
         <div class="col-md-12">
             <div class="card border-primary shop" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title" title="Adds a fish to your click" onclick="click()">🍺Crack Open a Cold One</h5>
-                    <h6 class="card-subtitle mb-2 text-muted"># purchased</h6>
-                    <h5 class="card-title" title="Adds 2 fish to your click" onclick="click()">🎣Upgrade Fishing Rod</h5>
-                    <h6 class="card-subtitle mb-2 text-muted"># purchased</h6>
-                    <h5 class="card-title" title="Gives you 1 fish every 5 seconds"onclick="click()">🐛Bait Your Hook</h5>
-                    <h6 class="card-subtitle mb-2 text-muted"># purchased</h6>
-                    <h5 class="card-title" title="Gives you 3 fish every 5 seconds"onclick="click()">🕸Cast Out a Net</h5>
-                    <h6 class="card-subtitle mb-2 text-muted"># purchased</h6>
+                    <h5 class="card-title" 
+                        onclick="buyClickUpgrade('beverage')">🍺Crack Open a Cold One</h5>
+                    <h6 id="beverage-total" class="card-subtitle mb-2 text-muted">x0</h6>
+                    <h5 class="card-title" 
+                        onclick="buyClickUpgrade('betterRod')">🎣Upgrade Fishing Rod</h5>
+                    <h6 id="betterRod-total"class="card-subtitle mb-2 text-muted">x0</h6>
+                    <h5 class="card-title"
+                        onclick="click()">🐛Bait Hook</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">x0</h6>
+                    <h5 class="card-title"
+                        onclick="click()">🕸Cast Net</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">x0</h6>
                 </div>
             </div>
         </div>
