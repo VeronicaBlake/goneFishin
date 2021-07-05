@@ -14,12 +14,12 @@ let clickUpgrades = {
 }
 
 let autoUpgrades = {
-    net: {
+    'net': {
         price: 4,
         quantity: 0,
         fishAdded: 10
     },
-    bait: {
+    'bait': {
         price: 5,
         quantity: 0,
         fishAdded: 30
@@ -32,7 +32,9 @@ function addFish(){
     for( let key in clickUpgrades){
         totalFish += clickUpgrades[key].fishAdded * clickUpgrades[key].quantity
     }
-    console.log(totalFish)
+    //  for( let key in autoUpgrades){
+    //     totalFish += autoUpgrades[key].fishAdded * autoUpgrades[key].quantity
+    // }
     draw()
 }
 
@@ -54,24 +56,14 @@ function buyClickUpgrade(key){
 
 ///
 
-function buyAutoUpgrade(){
-    let upgrade = autoUpgrades[key].price
-    if(totalFish >= upgrade){
-        totalFish -= upgrade
+function buyAutoUpgrade(key){
+    let price = autoUpgrades[key].price
+    if(totalFish >= price){
+        totalFish -= price
         autoUpgrades[key].quantity++ 
-        modifier = ((upgrade.fishAdded)*(autoUpgrades.quantity))
+        modifier = ((price.fishAdded)*(autoUpgrades.quantity))
     }
-    //INTERPOLATING IS THE BEEEEEST
     document.getElementById(`${key}-total`).innerHTML = `x` + autoUpgrades[key].quantity.toString()
     draw()
-    //take into account how many fish are needed to buy 
-    //evaluate if totalFish is greater than or equal to 
-    //subtract the cost of the upgrade from totalfish
-    //fish will be added on the interval 
 }
-
-// takes the priceMultiplier and multiplies the cost of the upgrade by that
-function increaseUpgradeCost(upgradeCost){
-   
-}
-
+// add to totalfish on the interval
