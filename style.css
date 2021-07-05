@@ -8,6 +8,12 @@ main {
   flex-grow: 1;
 }
 
+.background {
+  background-image: url(https://media.giphy.com/media/l4KihuqeuJEi9qLSM/giphy.gif);
+  background-size: cover;
+  background-position: 50% 60%;
+}
+
 .glow:hover {
   text-shadow: 1px 1px 2px black, 0 0 25px rgb(211, 206, 206),
     0 0 5px rgb(211, 206, 206);
