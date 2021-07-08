@@ -13,15 +13,15 @@ let clickUpgrades = {
 }
 
 let autoUpgrades = {
-    'net': {
+    'bait': {
         price: 4,
         quantity: 0,
-        fishAdded: 10
+        fishAdded: 30
     },
-    'bait': {
+    'net': {
         price: 5,
         quantity: 0,
-        fishAdded: 30
+        fishAdded: 10
     }
 }
 
@@ -39,41 +39,34 @@ function addFish(){
 // REVIEW there's got to be a way to put these into two functions but I'm sort of freaking rn
 //so I'll take what I can get 
 
-function addFishAuto(){
-    totalFish++
-    for(let key in autoUpgrades){
-        totalFish += autoUpgrades[key].fishAdded * autoUpgrades[key].quantity
-    }
-    console.log(totalFish)
-}
-
 function draw(){
     document.getElementById('total-fish').innerHTML = `Total Fish:` + totalFish.toString() 
 }
 
-
-//REVIEW What is "modiefier" doing??
 function buyClickUpgrade(key){
     let upgrade = clickUpgrades[key].price
     if(totalFish >= upgrade){
         totalFish -= upgrade
         clickUpgrades[key].quantity++ 
-        modifier = ((upgrade.fishAdded)*(clickUpgrades.quantity))
+        clickUpgrades[key].price = clickUpgrades[key].price*2
+        // modifier = ((clickUpgrades[key].fishAdded)*(clickUpgrades[key].quantity))
     }
     document.getElementById(`${key}-total`).innerHTML = `x` + clickUpgrades[key].quantity.toString()
+    document.getElementById(`${key}-price`).innerHTML = `fish needed:` + clickUpgrades[key].price.toString()
     draw()
 }
 
-///
+//REVIEW do these have to be two separate functions because 2 dictionaries? 
 
 function buyAutoUpgrade(key){
     let price = autoUpgrades[key].price
     if(totalFish >= price){
         totalFish -= price
         autoUpgrades[key].quantity++ 
-        modifier = ((price.fishAdded)*(autoUpgrades.quantity))
+        autoUpgrades[key].price = autoUpgrades[key].price*2
     }
     document.getElementById(`${key}-total`).innerHTML = `x` + autoUpgrades[key].quantity.toString()
+    document.getElementById(`${key}-price`).innerHTML = `fish needed:` + autoUpgrades[key].price.toString()
     draw()
 }
 // add to totalfish on the interval
