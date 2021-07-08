@@ -36,8 +36,6 @@ function addFish(){
     }
     draw()
 }
-// REVIEW there's got to be a way to put these into two functions but I'm sort of freaking rn
-//so I'll take what I can get 
 
 function draw(){
     document.getElementById('total-fish').innerHTML = `Total Fish:` + totalFish.toString() 
@@ -45,15 +43,21 @@ function draw(){
 
 function buyClickUpgrade(key){
     let upgrade = clickUpgrades[key].price
+    //assign the variable 'upgrade' to the price of the specific upgrade chosen on the click
     if(totalFish >= upgrade){
+        //if the total fish are greater than/equal to the price of the upgrade
         totalFish -= upgrade
+        //subtract the cost of the upgrade 'buy'
         clickUpgrades[key].quantity++ 
+        //add one to how many upgrades the player has 
         clickUpgrades[key].price = clickUpgrades[key].price*2
-        // modifier = ((clickUpgrades[key].fishAdded)*(clickUpgrades[key].quantity))
+        //multiply the price of the upgrade by 2 each time one is bought 
     }
     document.getElementById(`${key}-total`).innerHTML = `x` + clickUpgrades[key].quantity.toString()
     document.getElementById(`${key}-price`).innerHTML = `fish needed:` + clickUpgrades[key].price.toString()
+    //update the quantity and price on the user's display 
     draw()
+    //update total fish on user's display 
 }
 
 //REVIEW do these have to be two separate functions because 2 dictionaries? 
@@ -69,4 +73,7 @@ function buyAutoUpgrade(key){
     document.getElementById(`${key}-price`).innerHTML = `fish needed:` + autoUpgrades[key].price.toString()
     draw()
 }
-// add to totalfish on the interval
+
+setInterval((key) => {
+    totalFish = totalFish + autoUpgrades[key].fishAdded
+}, 5000);
