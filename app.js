@@ -74,6 +74,15 @@ function buyAutoUpgrade(key){
     draw()
 }
 
-setInterval((key) => {
-    totalFish = totalFish + autoUpgrades[key].fishAdded
-}, 5000);
+// setInterval((key) => {
+//     totalFish = totalFish + autoUpgrades[key].fishAdded
+// }, 5000);
+
+// function startIntervalBaker() {
+//     collectionInterval = setInterval(collectAutoUpgradesBaker, 5000);
+// }tg6
+
+// function collectAutoUpgradesBaker(){
+//     feed = bakerMod + feed 
+//     update()
+// }
