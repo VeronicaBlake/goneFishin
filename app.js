@@ -16,12 +16,12 @@ let autoUpgrades = {
     'bait': {
         price: 4,
         quantity: 0,
-        fishAdded: 30
+        fishAdded:5
     },
     'net': {
         price: 5,
         quantity: 0,
-        fishAdded: 10
+        fishAdded:10
     }
 }
 
@@ -68,15 +68,20 @@ function buyAutoUpgrade(key){
         totalFish -= price
         autoUpgrades[key].quantity++ 
         autoUpgrades[key].price = autoUpgrades[key].price*2
+        startInterval(key)
     }
     document.getElementById(`${key}-total`).innerHTML = `x` + autoUpgrades[key].quantity.toString()
     document.getElementById(`${key}-price`).innerHTML = `fish needed:` + autoUpgrades[key].price.toString()
     draw()
 }
 
-// setInterval((key) => {
-//     totalFish = totalFish + autoUpgrades[key].fishAdded
-// }, 5000);
+function startInterval(key){
+    setInterval(() => {
+        totalFish = totalFish += autoUpgrades[key].fishAdded
+    }, 3000);
+    draw()
+}
+
 
 // function startIntervalBaker() {
 //     collectionInterval = setInterval(collectAutoUpgradesBaker, 5000);
