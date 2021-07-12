@@ -1,12 +1,12 @@
 let clickUpgrades = {
     'beverage': {
-        price: 2,
+        price: 10,
         quantity: 0,
         fishAdded: 1, 
         //this is how many are added to the total when the upgrade is run
     },
     'betterRod': {
-        price: 3,
+        price: 30,
         quantity: 0,
         fishAdded: 2,
     }
@@ -14,12 +14,12 @@ let clickUpgrades = {
 
 let autoUpgrades = {
     'bait': {
-        price: 4,
+        price: 50,
         quantity: 0,
         fishAdded:5
     },
     'net': {
-        price: 5,
+        price: 100,
         quantity: 0,
         fishAdded:10
     }
