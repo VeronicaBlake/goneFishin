@@ -55,6 +55,7 @@ function buyClickUpgrade(key){
     }
     document.getElementById(`${key}-total`).innerHTML = `x` + clickUpgrades[key].quantity.toString()
     document.getElementById(`${key}-price`).innerHTML = `fish needed:` + clickUpgrades[key].price.toString()
+    document.getElementById(`${key}-mod`).innerHTML = `fish added per click:` + clickUpgrades[key].fishAdded.toString()
     //update the quantity and price on the user's display 
     draw()
     //update total fish on user's display 
@@ -72,6 +73,7 @@ function buyAutoUpgrade(key){
     }
     document.getElementById(`${key}-total`).innerHTML = `x` + autoUpgrades[key].quantity.toString()
     document.getElementById(`${key}-price`).innerHTML = `fish needed:` + autoUpgrades[key].price.toString()
+    document.getElementById(`${key}-mod`).innerHTML = `fish added every 3 seconds:` + autoUpgrades[key].fishAdded.toString()
     draw()
 }
 
