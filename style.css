@@ -21,5 +21,70 @@ main {
 }
 
 .shop {
-  max-width: 40vw;
+  max-width: 90vw;
+  min-width: 40vw;
+}
+
+.main-fish {
+  animation-name: color-pulse;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes color-pulse {
+  0% {
+    color: #46d5e6;
+    left: 0px;
+    top: 0px;
+  }
+  10% {
+    color: #e53fb6;
+    left: 0px;
+    top: 0px;
+  }
+  20% {
+    color: #ffc008;
+    left: 200px;
+    top: 0px;
+  }
+  30% {
+    color: #3cf182;
+    left: 200px;
+    top: 200px;
+  }
+  40% {
+    color: #e53fb6;
+    left: 0px;
+    top: 0px;
+  }
+  50% {
+    color: #e14f58;
+    left: 0px;
+    top: 0px;
+  }
+  60% {
+    color: #ffc008;
+    left: 0px;
+    top: 0px;
+  }
+  70% {
+    color: #3cf182;
+    left: 0px;
+    top: 200px;
+  }
+  80% {
+    color: #e14f58;
+    left: 0px;
+    top: 0px;
+  }
+  90% {
+    color: #3cf182;
+    left: 0px;
+    top: 0px;
+  }
+  100% {
+    color: #46d5e6;
+    left: 0px;
+    top: 0px;
+  }
 }

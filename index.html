@@ -13,43 +13,41 @@
     <title>Gone Fishin🐠</title>
 </head>
 <body>
-<header class="bg-light text-dark shadow text-center p-3">
-</header>
 <main class="container background">
     <div class="row text-center">
         <div class="col-md-12 text-white">
                 <h1 id="total-fish">Total Fish: </h1>
         </div>
         <div id="clicker" class="col-md-12" >
-            <i class="fas fa-fish fa-10x glow" onclick="addFish()"></i>
+            <i class="fas fa-fish fa-10x glow mb-2 main-fish" onclick="addFish()"></i>
         </div>
     </div>
-    <div class="row>
-        <div class="col-md-12">
-            <div class="card border-primary bg-primary glow shop" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title" 
-                        onclick="buyClickUpgrade('beverage')">🍺Crack Open a Cold One</h5>
-                    <h6 id="beverage-total" class="card-subtitle mb-2 text-muted">x0</h6>
-                    <h6 id="beverage-price" class="card-subtitle mb-2 text-muted">fish needed:2</h6>
-                    <h5 class="card-title" 
-                        onclick="buyClickUpgrade('betterRod')">🎣Upgrade Fishing Rod</h5>
-                    <h6 id="betterRod-total"class="card-subtitle mb-2 text-muted">x0</h6>
-                    <h6 id="betterRod-price" class="card-subtitle mb-2 text-muted">fish needed:3</h6>
-                    <h5 class="card-title"
-                        onclick="buyAutoUpgrade('bait')">🐛Bait Hook</h5>
-                    <h6 id="bait-total" class="card-subtitle mb-2 text-muted">x0</h6>
-                    <h6 id="bait-price" class="card-subtitle mb-2 text-muted">fish needed:4</h6>
-                    <h5 class="card-title"
-                        onclick="buyAutoUpgrade('net')">🕸Cast Net</h5>
-                    <h6 id="net-total" class="card-subtitle mb-2 text-muted">x0</h6>
-                    <h6 id="net-price" class="card-subtitle mb-2 text-muted">fish needed:5</h6>
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-center mt-2">
+            <div class="card border-primary bg-primary shop" style="width: 18rem;">
+                <div class="card-body row">
+                    <div id="click-upgrades" class="col">
+                        <h5 class="card-title" onclick="buyClickUpgrade('beverage')">🍺Crack Open a Cold One</h5>
+                        <h6 id="beverage-total" class="card-subtitle mb-2 text-muted">x0</h6>
+                        <h6 id="beverage-price" class="card-subtitle mb-2 text-muted">fish needed:2</h6>
+                        <h5 class="card-title mt-4" onclick="buyClickUpgrade('betterRod')">🎣Upgrade Fishing Rod</h5>
+                        <h6 id="betterRod-total" class="card-subtitle mb-2 text-muted">x0</h6>
+                        <h6 id="betterRod-price" class="card-subtitle mb-2 text-muted">fish needed:3</h6>
+                    </div>
+                    <div id="auto-upgrades" class="col pl-3 ml-5">
+                        <h5 class="card-title" onclick="buyAutoUpgrade('bait')">🐛Bait Hook</h5>
+                        <h6 id="bait-total" class="card-subtitle mb-2 text-muted">x0</h6>
+                        <h6 id="bait-price" class="card-subtitle mb-2 text-muted">fish needed:4</h6>
+                        <h5 class="card-title mt-5" onclick="buyAutoUpgrade('net')">🕸Cast Net</h5>
+                        <h6 id="net-total" class="card-subtitle mb-2 text-muted">x0</h6>
+                        <h6 id="net-price" class="card-subtitle mb-2 text-muted">fish needed:5</h6>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </main>
-<footer class="bg-dark text-light shadow text-center p-2">
+<footer class="bg-dark text-light shadow text-center">
     <p>🐠🐠🐠</p>
 </footer>
 <script src="app.js"></script>
